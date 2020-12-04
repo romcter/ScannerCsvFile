@@ -26,9 +26,7 @@ public class WorkWithFile {
                 }
             }
             StringBuilder sb = new StringBuilder().append("Name/Date,");
-            for (String date : allDateThatHasFile) {
-                sb.append(date + ",");
-            }
+            allDateThatHasFile.stream().map((n) -> sb.append(n + ","));
             sb.delete(sb.length() - 1, sb.length());
             for (String i : employees.keySet()) {
                 sb.append("\n" + i + ",");
