@@ -16,7 +16,7 @@ public class WorkWithFile {
                 String nameEmployee = scanner.next();
                 if (nameEmployee.intern() != "Employee Name") {
                     if (!employees.containsKey(nameEmployee)) {
-                        employees.put(nameEmployee, emp = new Employee(nameEmployee));
+                        employees.put(nameEmployee, emp = new Employee());
                     }
                     String worksDay = scanner.next();
                     if (!allDate.contains(worksDay))
