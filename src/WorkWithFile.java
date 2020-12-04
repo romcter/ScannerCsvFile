@@ -4,12 +4,14 @@ import java.util.*;
 public class WorkWithFile {
 
     public static void main(String[] args) {
+        final String PATH_WHERE_TO_YOUR_FILE = "/Users/macbookpro/Downloads/ScannerCsvFile/src/acme_worksheet.csv";
+        final String NAME_RESULT_FILE = "result.csv";
         String line;
         Scanner scanner;
         HashMap<String, HashMap<String, String>> employees = new HashMap<>();
         List<String> allDateThatHasFile = new ArrayList<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader("/Users/macbookpro/Downloads/ScannerCsvFile/src/acme_worksheet.csv"));
-             PrintWriter writer = new PrintWriter(new File("result.csv"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(PATH_WHERE_TO_YOUR_FILE));
+             PrintWriter writer = new PrintWriter(new File(NAME_RESULT_FILE))) {
             while ((line = reader.readLine()) != null) {
                 scanner = new Scanner(line).useDelimiter(",");
                 String nameEmployee = scanner.next();
