@@ -9,7 +9,7 @@ public class WorkWithFile {
         HashMap<String, HashMap<String, String>> employees = new HashMap<>();
         List<String> allDateThatHasFile = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader("/Users/macbookpro/Downloads/ScannerCsvFile/src/acme_worksheet.csv"));
-             PrintWriter writer = new PrintWriter(new File("test.csv"))) {
+             PrintWriter writer = new PrintWriter(new File("result.csv"))) {
             while ((line = reader.readLine()) != null) {
                 scanner = new Scanner(line).useDelimiter(",");
                 String nameEmployee = scanner.next();
